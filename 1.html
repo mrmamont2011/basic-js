@@ -1,0 +1,29 @@
+<script>
+    members =[
+        'Amelia',
+        'Grace',
+        'Lily ',
+        'ruby',
+      ];
+  let arr = [];
+  
+  let regexp = /\b[A-Z]/gi;
+  //if (!members.isArray()) return false;
+  //console.log(!Array.isArray(members), members.length);
+  //expr.match(/\b[A-Z]/gi);
+  for (item of members) {
+      regexp.lastIndex = 0;
+     // console.log(item, typeof item, regexp.exec(item)[0].toUpperCase());
+    if (typeof item === "string") {
+      arr.push( regexp.exec(item)[0].toUpperCase());  
+      console.log(arr);
+    } 
+
+  }
+    arr.sort();
+    console.log(arr.join(''));
+    
+
+
+
+</script>
