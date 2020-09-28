@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 module.exports = function countCats(matrix) {
         
   if(!matrix == true) return 0;
@@ -11,12 +10,4 @@ module.exports = function countCats(matrix) {
       }
     
   return (sum);
-}
-=======
-const CustomError = require("../extensions/custom-error");
-
-module.exports = function countCats(/* matrix */) {
-  throw new CustomError('Not implemented');
-  // remove line with error and write your code here
 };
->>>>>>> f98a58a34671527de94016f7436aaa6f9729ff77
