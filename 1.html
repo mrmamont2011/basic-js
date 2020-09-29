@@ -1,6 +1,36 @@
 <script>
-    let eee  = new Date(676, 6, 29, 12, 31, 12, 934);
-    
-      console.log(eee.getMonth());
- 
+  let arr = [1, 2, 3, '--double-next', 1337, '--double-prev', 4, 5];
+  if (!Array.isArray(arr)) throw new CustomError('throws an Error if arr is not an Array');
+  let result = arr;
+  let isFinish = false;
+  while (!isFinish) {
+    for (let i = 0; i < result.length; i++ ){
+      if (result[i] = '--discard-next') {
+       result.splice(i, 2);
+       break;
+      }
+      if (result[i] = '--discard-prev') {
+        result.splice(i-1, 2);
+        break;
+      }
+      if (result[i] = '--double-next') {
+        result.splice(i, 1, result[i+1]);
+        break;
+      }
+      if (result[i] = '--double-prev') {
+        result.splice(i, 1, result[i-1]);
+        break;
+      }
+      if (i === result.length - 1) isFinish = true;
+
+
+    }
+
+
+  }
+
+  console.log(result);
+  
+
+
 </script>
